@@ -4,7 +4,7 @@ def multiple_times(repeat_times):
 
     def actual_decorator(func):
 
-        def wrapper(a, b):
+        def wrapper(*args):
             result = {}
             result['start_time'] = time.time()
             result['iteration_times'] = []
@@ -12,7 +12,7 @@ def multiple_times(repeat_times):
             result['final_result'] = None
             for i in range(repeat_times):
                 start_time_iteration = time.time()
-                temp_result = func(a, b)
+                temp_result = func(*args)
                 iteration_time = time.time() - start_time_iteration
                 result['iteration_times'].append(iteration_time)
                 result['iteration_results'].append(temp_result)
