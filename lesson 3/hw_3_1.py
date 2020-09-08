@@ -35,4 +35,13 @@ def addition(a, b):
         result += a + b
     return result
 
-print(addition(10, 50))
+function_result = addition(10, 50)
+print(f'Начало исполнения функций: {function_result["start_time"]}')
+print(f'Общее время исполнения функций: {function_result["total_time"]}')
+print(f'Название функции: {function_result["function_name"]}')
+print(f'Последний результат функции: {function_result["final_result"]}')
+for single_time in function_result['iteration_times']:
+    print(f'Время исполнения функции: {single_time}')
+for single_result in function_result['iteration_results']:
+    print (f'Значение выполнения функции: {single_result}')
+
