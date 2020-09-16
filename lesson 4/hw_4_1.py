@@ -59,7 +59,7 @@ class Teacher(Persona):
         return f"{self.surname}"
 
     def show_info(self):
-        return f"{self.surname} was born on {self.birthday} and teaches {self.fakultet} on {self.dolzhnost} for {self.staz}"
+        return f"{self.surname} was born on {self.birthday} and teaches {self.fakultet} as {self.dolzhnost} for {self.staz} years"
 
     def get_age(self):
         return relativedelta(datetime.now(),self.birthday).years
