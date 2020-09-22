@@ -8,9 +8,8 @@ class Persona(ABC):
     def show_info(self):
         pass
 
-    @abstractmethod
     def get_age(self):
-        pass
+        return relativedelta(datetime.now(),self.birthday).years
 
 class Student(Persona):
 
@@ -26,8 +25,8 @@ class Student(Persona):
     def show_info(self):
         return f"{self.surname} was born on {self.birthday} and is studying in {self.fakultet} ({self.kurs})"
 
-    def get_age(self):
-        return relativedelta(datetime.now(),self.birthday).years
+    #def get_age(self):
+    #    return relativedelta(datetime.now(),self.birthday).years
 
 class Abiturient(Persona):
 
@@ -42,8 +41,8 @@ class Abiturient(Persona):
     def show_info(self):
         return f"{self.surname} was born on {self.birthday} and is studying in {self.fakultet}"
 
-    def get_age(self):
-        return relativedelta(datetime.now(),self.birthday).years
+    #def get_age(self):
+    #    return relativedelta(datetime.now(),self.birthday).years
 
 
 class Teacher(Persona):
@@ -61,8 +60,8 @@ class Teacher(Persona):
     def show_info(self):
         return f"{self.surname} was born on {self.birthday} and teaches {self.fakultet} as {self.dolzhnost} for {self.staz} years"
 
-    def get_age(self):
-        return relativedelta(datetime.now(),self.birthday).years
+    #def get_age(self):
+    #    return relativedelta(datetime.now(),self.birthday).years
 
 
 stu1 = Student('Goretskyi', '19/08/1991', 'test', 'testik')
