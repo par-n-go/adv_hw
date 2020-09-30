@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{category.name}}</title>
+</head>
+<body>
+<h1>Список товаров в категории "{{category.name}}":</h1>
+<h3>
+    {% if products %}
+    <ul>
+        {% for product in products %}
+        <li><a href="/product/{{product.id}}">{{product.name}}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    Нет товаров в данной категории
+    {% endif %}
+</h3>
+</body>
+</html>
