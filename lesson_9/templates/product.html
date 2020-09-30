@@ -13,12 +13,12 @@
         <li>Название товара: {{product.name}}</li>
         <li><a href="/category/{{product.category_id}}">Категория товара: {{product.category_name}}</a></li>
         {% if product.shop %}
-        <li>Есть в магазине</li>
+        <li>Единиц в магазине: {{product.shop}}</li>
         {% else %}
         <li>Товара нет в магазине</li>
         {% endif %}
         {% if product.stock %}
-        <li>Есть на складе</li>
+        <li>Единиц на складе: {{product.stock}}</li>
         {% else %}
         <li>Товара нет на складе</li>
         {% endif %}
